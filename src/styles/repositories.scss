@@ -4,18 +4,26 @@ section.repository_list{
     width: 600px;
     border: 1px solid rgb(192, 192, 192);
     border-radius: 10px;
-
-    h1{
-        color:rgb(216, 216, 216);
+    
+    div.repository_header{
+        display: flex;
+        justify-content: space-around;
+        align-items: baseline;
         margin-bottom: 32px;
+        h1{
+            color:rgb(216, 216, 216);
+            
+        }
+       
+        h2{
+            color:rgb(245, 245, 245);
+        }
+        
     }
-
-    h1{
-
-    }
-
+    
+    
     h2{
-        margin-bottom: 10px;
+        margin-bottom: 5px;
         font-size: 18px;
         color: rgb(192, 192, 192);;
        
@@ -25,9 +33,6 @@ section.repository_list{
     
     ul{
         list-style: none;
-
-      
-
         li{
             padding: 20px;
             background-color: #0D1117;
@@ -42,16 +47,57 @@ section.repository_list{
             }
             p{
                 color:rgb(192, 192, 192);
-                margin-bottom: 15px;
+                margin-bottom: 30px;
             }
 
-            a{
-                display: inline-block;
-                width: 100%;
-                text-align: right;
-                text-decoration: none;
-                color: lightseagreen;
+            div{
+                display: flex;
+                justify-content: space-between;
+
+                div{
+                    span{
+                        color:rgb(245, 245, 245);
+                        font-size: 14px;
+                        padding: 7px;
+                        border-radius: 5px;
+                        & + span{
+                            margin-left: 15px;
+                        }
+    
+                        strong{
+                            margin-right: 5px;                           
+                        }
+                    }
+                    
+                    span:nth-child(1){
+                        background-color: green;
+                       
+                    }
+
+                    span:nth-child(2){
+                        background-color: orangered;
+                    }
+                }
+               
+                a{
+                    padding: 7px;
+                    text-align: right;
+                    text-decoration: none;
+                    color: lightseagreen;
+                    border-radius: 5px;
+                    transition: background 0.25s ease-in-out;
+                    
+                }
+
+                a:hover{
+                    background-color: lightseagreen;
+                    color: whitesmoke;
+                   
+                }
             }
+
+           
+           
         }
     }
 }
